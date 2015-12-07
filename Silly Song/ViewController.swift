@@ -43,8 +43,13 @@ class ViewController: UIViewController {
     
     
     @IBAction func displayLyrics(sender: AnyObject) {
-        let fullName = nameField.text
-        return lyricsView.text = lyricsForName(bananaFanaTemplate, fullName: fullName!)
+        let fullName = nameField.text?.lowercaseString
+        
+        if fullName == "" {
+            return lyricsView.text = lyricsForName(bananaFanaTemplate, fullName: "NoName")
+        } else {
+            return lyricsView.text = lyricsForName(bananaFanaTemplate, fullName: fullName!)
+        }
     }
     
 }
@@ -58,14 +63,13 @@ let bananaFanaTemplate = [
 
 
 func shortNameFromName(fullName: String) -> String {
-    let lowercaseName = fullName.lowercaseString
     let vowelSet = NSCharacterSet(charactersInString: "aeiou")
     
     if let firstVowelRange = fullName.rangeOfCharacterFromSet(vowelSet, options: .CaseInsensitiveSearch) {
-        return lowercaseName.substringFromIndex(firstVowelRange.startIndex)
+        return fullName.substringFromIndex(firstVowelRange.startIndex)
     }
     
-    return lowercaseName
+    return fullName
 }
 
 

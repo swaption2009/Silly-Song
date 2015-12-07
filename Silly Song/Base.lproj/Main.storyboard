@@ -30,7 +30,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Your Name:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2M-Cj-MJw">
-                                <rect key="frame" x="26" y="151" width="549" height="30"/>
+                                <rect key="frame" x="25" y="154" width="550" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -58,9 +58,9 @@
                             <constraint firstItem="wjg-Ah-pwP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="TOW-6k-BEU"/>
                             <constraint firstItem="Xza-qR-h77" firstAttribute="centerX" secondItem="x2M-Cj-MJw" secondAttribute="centerX" id="UDe-Rw-BeF"/>
                             <constraint firstItem="x2M-Cj-MJw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XAu-a0-5QJ"/>
-                            <constraint firstItem="x2M-Cj-MJw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="6" id="eLX-tY-Ii5"/>
-                            <constraint firstItem="x2M-Cj-MJw" firstAttribute="top" secondItem="wjg-Ah-pwP" secondAttribute="bottom" constant="27" id="i90-Us-ZMK"/>
-                            <constraint firstItem="Xza-qR-h77" firstAttribute="top" secondItem="x2M-Cj-MJw" secondAttribute="bottom" constant="39" id="pPf-JH-OEc"/>
+                            <constraint firstItem="x2M-Cj-MJw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="eLX-tY-Ii5"/>
+                            <constraint firstItem="x2M-Cj-MJw" firstAttribute="top" secondItem="wjg-Ah-pwP" secondAttribute="bottom" constant="30" id="i90-Us-ZMK"/>
+                            <constraint firstItem="Xza-qR-h77" firstAttribute="top" secondItem="x2M-Cj-MJw" secondAttribute="bottom" constant="40" id="pPf-JH-OEc"/>
                             <constraint firstItem="wjg-Ah-pwP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qxL-07-OTq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="x2M-Cj-MJw" secondAttribute="trailing" constant="5" id="xy6-IA-fAm"/>
                         </constraints>
