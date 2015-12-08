@@ -43,11 +43,9 @@ class ViewController: UIViewController {
     
     
     @IBAction func displayLyrics(sender: AnyObject) {
-        let fullName = nameField.text?.lowercaseString
+        let fullName = nameField.text
         
-        if fullName == "" {
-            return lyricsView.text = lyricsForName(bananaFanaTemplate, fullName: "NoName")
-        } else {
+        if fullName != "" {
             return lyricsView.text = lyricsForName(bananaFanaTemplate, fullName: fullName!)
         }
     }
@@ -63,13 +61,14 @@ let bananaFanaTemplate = [
 
 
 func shortNameFromName(fullName: String) -> String {
+    let lowerCaseName = fullName.lowercaseString
     let vowelSet = NSCharacterSet(charactersInString: "aeiou")
     
-    if let firstVowelRange = fullName.rangeOfCharacterFromSet(vowelSet, options: .CaseInsensitiveSearch) {
-        return fullName.substringFromIndex(firstVowelRange.startIndex)
+    if let firstVowelRange = lowerCaseName.rangeOfCharacterFromSet(vowelSet, options: .CaseInsensitiveSearch) {
+        return lowerCaseName.substringFromIndex(firstVowelRange.startIndex)
     }
     
-    return fullName
+    return lowerCaseName
 }
 
 
@@ -77,7 +76,7 @@ func lyricsForName(lyricsTemplate: String, fullName: String) -> String {
     let shortName = shortNameFromName(fullName)
     
     let lyrics = lyricsTemplate
-        .stringByReplacingOccurrencesOfString("<FULL_NAME>", withString: fullName)
+        .stringByReplacingOccurrencesOfString("<FULL_NAME>", withString: fullName.capitalizedString)
         .stringByReplacingOccurrencesOfString("<SHORT_NAME>", withString: shortName)
     
     return lyrics
